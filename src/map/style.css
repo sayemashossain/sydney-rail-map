@@ -1,0 +1,80 @@
+:root {
+    --scale-unit: 30px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.map {
+    width: calc(var(--scale-unit) * 20);
+    height: calc(var(--scale-unit) * 20);
+    position: relative;
+    background-color: #efefef;
+    z-index: 1;
+}
+
+.station {
+    width: calc(var(--scale-unit) / 10);
+    height: calc(var(--scale-unit) / 10);
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 3;
+}
+
+.line {
+    width: 3px;
+    background-color: magenta;
+    position: absolute;
+    z-index: 2;
+}
+
+.t5 {
+    outline: magenta solid 2px;
+}
+
+#richmond {
+    top: calc(var(--scale-unit) * 2.5);
+    left: calc(var(--scale-unit) * 2.8);
+}
+
+#east-richmond {
+    top: calc(var(--scale-unit) * 3);
+    left: calc(var(--scale-unit) * 2.8);
+}
+
+#richmond-east-richmond {
+    height: calc((var(--scale-unit) * 3) - (var(--scale-unit) * 2.5));
+    top: calc(var(--scale-unit) * 2.5);
+    left: calc(var(--scale-unit) * 2.8);
+}
