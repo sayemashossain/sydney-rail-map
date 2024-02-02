@@ -58,23 +58,3 @@ h6 {
     position: absolute;
     z-index: 2;
 }
-
-.t5 {
-    outline: magenta solid 2px;
-}
-
-#richmond {
-    top: calc(var(--scale-unit) * 2.5);
-    left: calc(var(--scale-unit) * 2.8);
-}
-
-#east-richmond {
-    top: calc(var(--scale-unit) * 3);
-    left: calc(var(--scale-unit) * 2.8);
-}
-
-#richmond-east-richmond {
-    height: calc((var(--scale-unit) * 3) - (var(--scale-unit) * 2.5));
-    top: calc(var(--scale-unit) * 2.5);
-    left: calc(var(--scale-unit) * 2.8);
-}
