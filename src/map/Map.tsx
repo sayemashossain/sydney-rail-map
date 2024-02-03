@@ -6,22 +6,22 @@ const stations = [
         id: 't5s1',
         line: lines.T5,
         name: 'richmond',
-        x: 2.5,
-        y: 2.8,
+        x: 2.8 * 30,
+        y: 2.5 * 30,
     },
     {
         id: 't5s2',
         line: lines.T5,
         name: 'east-richmond',
-        x: 3,
-        y: 2.8,
+        x: 2.8 * 30,
+        y: 3 * 30,
     },
     {
         id: 't5s3',
         line: lines.T5,
         name: 'richmond-east-richmond',
-        x: 3.5,
-        y: 2.8,
+        x: 2.8 * 30,
+        y: 3.5 * 30,
     },
 ]
 

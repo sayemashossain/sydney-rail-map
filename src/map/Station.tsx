@@ -1,3 +1,5 @@
+import { TripOrigin } from '@mui/icons-material'
+import { Box, IconButton } from '@mui/material'
 import './style.css'
 
 export const SCALE_FACTOR = 30
@@ -25,17 +27,18 @@ export const Station = ({
 }) => {
     const color: string = lineColours[line] || 'white'
 
-    const styles = {
-        width: `${SCALE_FACTOR / 10}px`,
-        height: `${SCALE_FACTOR / 10}px`,
-        borderRadius: `100%`,
-        backgroundColor: `white`,
-        position: 'absolute',
-        zIndex: 3,
-        top: `${SCALE_FACTOR * y}px`,
-        left: `${SCALE_FACTOR * x}px`,
-        outline: `${color} solid 2px`,
-    } as React.CSSProperties
-
-    return <div style={styles} id={name}></div>
+    // <div style={styles} id={name}></div>
+    return (
+        <Box
+            sx={{
+                position: 'absolute',
+                top: `${y}px`,
+                left: `${x}px`,
+            }}
+        >
+            <IconButton aria-label={name} id={name} sx={{ padding: '2px' }}>
+                <TripOrigin sx={{ color, fontSize: '8px' }} />
+            </IconButton>
+        </Box>
+    )
 }
