@@ -1,10 +1,11 @@
-import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
-import { styled } from '@mui/material'
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { styled } from '@mui/material';
+import { useImage } from '../common/useImage';
 
 const VisuallyHiddenInput = styled('input')({
     clip: 'rect(0 0 0 0)',
@@ -16,24 +17,21 @@ const VisuallyHiddenInput = styled('input')({
     left: 0,
     whiteSpace: 'nowrap',
     width: 1,
-})
+});
 
-export default function MediaCard({
+export const MediaCard = ({
     name,
-    images,
+    code,
 }: {
-    name: string
-    images: string[]
-}) {
+    name: string;
+    code: string;
+}) => {
+    const image = useImage(code);
+
     return (
         <Card sx={{ width: 200 }}>
-            {images[0] ? (
-                <CardMedia
-                    sx={{ height: 200 }}
-                    image={images[0]}
-                    title={name}
-                />
-            ) : null}
+            <CardMedia sx={{ height: 200 }} image={image} title={name} />
+
             <CardContent
                 sx={{
                     p: 1,
@@ -55,5 +53,5 @@ export default function MediaCard({
                 </Button>
             </CardActions>
         </Card>
-    )
-}
+    );
+};
