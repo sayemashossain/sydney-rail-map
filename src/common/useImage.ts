@@ -9,7 +9,6 @@ export const useImage = (stationCode: string) => {
                 const response = await import(`../assets/stations/${stationCode}.jpg`);
                 setImage(response.default);
             } catch (err) {
-                console.log('Image not found');
                 const response = await import(`../assets/default.png`);
                 setImage(response.default);
             }

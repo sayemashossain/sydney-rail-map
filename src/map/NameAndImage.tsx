@@ -20,12 +20,13 @@ const VisuallyHiddenInput = styled('input')({
 });
 
 export const MediaCard = ({ name, code }: { name: string; code: string }) => {
-    const image = useImage(code) ?? undefined;
-    
+    const image = useImage(code);
+
     return (
         <Card sx={{ width: 200 }}>
-            <CardMedia sx={{ height: 200 }} image={image} title={name} />
-
+            {image && (
+                <CardMedia sx={{ height: 200 }} image={image} title={name} />
+            )}
             <CardContent
                 sx={{
                     p: 1,

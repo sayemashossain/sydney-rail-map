@@ -23,7 +23,10 @@ export const Map = () => {
     return (
         <div style={styles}>
             {connections.map((connection) => (
-                <Connection {...connection} />
+                <Connection
+                    key={`${connection.start}-${connection.end}-${connection.line}`}
+                    {...connection}
+                />
             ))}
             {stations.map((station) => (
                 <Station
