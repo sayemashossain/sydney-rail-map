@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
 export const useImage = (stationCode: string) => {
-    const [image, setImage] = useState<any>(null);
+    const [image, setImage] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchImage = async () => {
             try {
-                const response = await import(`../assets/${stationCode}.jpg`);
+                const response = await import(`../assets/stations/${stationCode}.jpg`);
                 setImage(response.default);
-            } catch (err: any) {
+            } catch (err) {
                 console.log('Image not found');
                 const response = await import(`../assets/default.png`);
                 setImage(response.default);

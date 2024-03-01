@@ -31,8 +31,6 @@ export const Connection = ({
     if (deltaX < 0 && deltaY >= 0) angle = -tanAngle;
     if (deltaX < 0 && deltaY < 0) angle = -tanAngle + Math.PI;
 
-    console.log({ start });
-
     return (
         <Box
             sx={{
