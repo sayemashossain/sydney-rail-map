@@ -20,7 +20,21 @@ export const Map = () => {
         zIndex: 1,
     } as React.CSSProperties;
 
+    // const styles = {
+    //     width: `1315px`,
+    //     height: `1377px`,
+    //     position: 'relative',
+    //     backgroundColor: '#efefef',
+    //     backgroundImage: `url(${map})`,
+    //     zIndex: 1,
+    // } as React.CSSProperties;
+
+    // const printMousePos = (event: MouseEvent) => {
+    //     console.log(event);
+    // };
+
     return (
+        // <div style={styles} onClick={printMousePos}>
         <div style={styles}>
             {connections.map((connection) => (
                 <Connection
